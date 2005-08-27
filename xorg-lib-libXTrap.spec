@@ -1,7 +1,5 @@
-# $Rev: 3272 $, $Date: 2005-08-27 17:42:48 $
-#
 Summary:	XTrap library
-Summary(pl):	libXTrap
+Summary(pl):	Biblioteka XTrap
 Name:		xorg-lib-libXTrap
 Version:	0.99.0
 Release:	0.03
@@ -12,13 +10,13 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXTrap-%{version}.tar.bz2
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-proto-trapproto-devel
 BuildRequires:	xorg-util-util-macros
-BuildRoot:	%{tmpdir}/libXTrap-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -28,12 +26,11 @@ XTrap library.
 %description -l pl
 Biblioteka XTrap.
 
-
 %package devel
 Summary:	Header files libXTrap development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXTrap
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXTrap = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXt-devel
 Requires:	xorg-proto-trapproto-devel
@@ -50,12 +47,11 @@ Biblioteka XTrap.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXTrap.
 
-
 %package static
-Summary:	Static libXTrap libraries
-Summary(pl):	Biblioteki statyczne libXTrap
-Group:		Development/Libraries
-Requires:	xorg-lib-libXTrap-devel = %{version}-%{release}
+Summary:	Static libXTrap library
+Summary(pl):	Biblioteka statyczna libXTrap
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 XTrap library.
@@ -67,10 +63,8 @@ Biblioteka XTrap.
 
 Pakiet zawiera statyczn± bibliotekê libXTrap.
 
-
 %prep
 %setup -q -n libXTrap-%{version}
-
 
 %build
 %{__libtoolize}
@@ -82,7 +76,6 @@ Pakiet zawiera statyczn± bibliotekê libXTrap.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -90,27 +83,22 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
-%attr(755,root,wheel) %{_libdir}/libXTrap.so.*
-
+%attr(755,root,root) %{_libdir}/libXTrap.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libXTrap.so
 %{_libdir}/libXTrap.la
-%attr(755,root,wheel) %{_libdir}/libXTrap.so
 %{_pkgconfigdir}/xtrap.pc
-
 
 %files static
 %defattr(644,root,root,755)
