@@ -1,4 +1,4 @@
-# $Rev: 3272 $, $Date: 2005-08-15 12:17:57 $
+# $Rev: 3272 $, $Date: 2005-08-27 17:42:48 $
 #
 Summary:	XTrap library
 Summary(pl):	libXTrap
@@ -15,7 +15,7 @@ BuildRequires:	automake
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	libtool
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-proto-trapproto-devel
 BuildRequires:	xorg-util-util-macros
 BuildRoot:	%{tmpdir}/libXTrap-%{version}-root-%(id -u -n)
