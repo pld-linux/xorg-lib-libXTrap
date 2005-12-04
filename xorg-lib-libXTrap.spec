@@ -25,8 +25,8 @@ XTrap library.
 Biblioteka XTrap.
 
 %package devel
-Summary:	Header files libXTrap development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXTrap
+Summary:	Header files for libXTrap library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXTrap
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -37,7 +37,7 @@ Requires:	xorg-proto-trapproto-devel
 XTrap library.
 
 This package contains the header files needed to develop programs that
-use these libXTrap.
+use libXTrap.
 
 %description devel -l pl
 Biblioteka XTrap.
