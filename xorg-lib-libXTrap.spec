@@ -5,8 +5,8 @@ Version:	1.0.0
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libXTrap-%{version}.tar.bz2
-# Source0-md5:	672fef3ff2e05752864535dead7485dd
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libXTrap-%{version}.tar.bz2
+# Source0-md5:	1e2d966b5b2b89910e418bb0f78e10de
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
