@@ -1,5 +1,5 @@
 Summary:	XTrap library
-Summary(pl):	Biblioteka XTrap
+Summary(pl.UTF-8):   Biblioteka XTrap
 Name:		xorg-lib-libXTrap
 Version:	1.0.0
 Release:	3
@@ -21,12 +21,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 XTrap library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka XTrap.
 
 %package devel
 Summary:	Header files for libXTrap library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXTrap
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXTrap
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -39,15 +39,15 @@ XTrap library.
 This package contains the header files needed to develop programs that
 use libXTrap.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka XTrap.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXTrap.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXTrap.
 
 %package static
 Summary:	Static libXTrap library
-Summary(pl):	Biblioteka statyczna libXTrap
+Summary(pl.UTF-8):   Biblioteka statyczna libXTrap
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -56,10 +56,10 @@ XTrap library.
 
 This package contains the static libXTrap library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka XTrap.
 
-Pakiet zawiera statyczn± bibliotekê libXTrap.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXTrap.
 
 %prep
 %setup -q -n libXTrap-%{version}
