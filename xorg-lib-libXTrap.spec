@@ -1,5 +1,5 @@
 Summary:	XTrap library
-Summary(pl.UTF-8):   Biblioteka XTrap
+Summary(pl.UTF-8):	Biblioteka XTrap
 Name:		xorg-lib-libXTrap
 Version:	1.0.0
 Release:	3
@@ -26,7 +26,7 @@ Biblioteka XTrap.
 
 %package devel
 Summary:	Header files for libXTrap library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXTrap
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXTrap
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -47,7 +47,7 @@ używających biblioteki libXTrap.
 
 %package static
 Summary:	Static libXTrap library
-Summary(pl.UTF-8):   Biblioteka statyczna libXTrap
+Summary(pl.UTF-8):	Biblioteka statyczna libXTrap
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
