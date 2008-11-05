@@ -2,7 +2,7 @@ Summary:	XTrap library
 Summary(pl.UTF-8):	Biblioteka XTrap
 Name:		xorg-lib-libXTrap
 Version:	1.0.0
-Release:	4
+Release:	5
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libXTrap-%{version}.tar.bz2
