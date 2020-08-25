@@ -2,16 +2,17 @@ Summary:	libXTrap library - client API for the DEC-XTRAP extension
 Summary(pl.UTF-8):	Biblioteka libXTrap - API klienckie rozszerzenia DEC-XTRAP
 Name:		xorg-lib-libXTrap
 Version:	1.0.1
-Release:	2
+Release:	3
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXTrap-%{version}.tar.bz2
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXTrap-%{version}.tar.bz2
 # Source0-md5:	076ff6279d202f19421b51af4f723935
-URL:		http://xorg.freedesktop.org/
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-proto-trapproto-devel
@@ -53,6 +54,7 @@ Summary:	Development files for libXTrap library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXTrap
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	xorg-lib-libX11-devel
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-lib-libXt-devel
 Requires:	xorg-proto-trapproto-devel
@@ -94,8 +96,10 @@ Ten pakiet zawiera statyczną bibliotekę libXTrap.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	pkgconfigdir=%{_pkgconfigdir}
+	DESTDIR=$RPM_BUILD_ROOT
+
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libXTrap.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -112,7 +116,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXTrap.so
-%{_libdir}/libXTrap.la
 %{_pkgconfigdir}/xtrap.pc
 
 %files static
