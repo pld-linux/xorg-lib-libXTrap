@@ -2,7 +2,7 @@ Summary:	libXTrap library - client API for the DEC-XTRAP extension
 Summary(pl.UTF-8):	Biblioteka libXTrap - API klienckie rozszerzenia DEC-XTRAP
 Name:		xorg-lib-libXTrap
 Version:	1.0.1
-Release:	3
+Release:	4
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXTrap-%{version}.tar.bz2
